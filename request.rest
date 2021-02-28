@@ -1,7 +1,7 @@
-POST https://pure-woodland-37864.herokuapp.com/api/persons/10
+POST https://pure-woodland-37864.herokuapp.com/api/persons
 Content-Type: application/json
 
 {   
-    "name": "Sergio Alvares",
-    "number": "3908121331"
+    "name": "Sergiosdqs Alvares",
+    "number": "390812133sdasdas1"
 }
