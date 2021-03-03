@@ -7,11 +7,12 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ../../part2 && npm run build --prod && cp -r build ../part3/backend",
+    "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs -tail",
-    "github": "git add . && git commit -m changes && git push origin main"
+    "github": "git add . && git commit -m changes && git push origin main",
+    "prod": "cd ../ && cp -r backend ../../../prod/exercises/"
   },
   "author": "Sergii Kirianov",
   "license": "ISC",
