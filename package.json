@@ -9,10 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend/",
     "deploy": "git push heroku main",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild",
     "logs:prod": "heroku logs -tail",
     "github": "git add . && git commit -m changes && git push origin main",
-    "prod": "cd ../ && cp -r backend ../../../prod/exercises/"
+    "prod": "npm run build:ui && cd ../../../../prod/exercises/phonebook && rm -rf backend && cd ../../../dev/Exercises/Phonebook && cp -r backend ../../../prod/exercises/phonebook"
   },
   "author": "Sergii Kirianov",
   "license": "ISC",
